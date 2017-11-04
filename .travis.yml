@@ -6,8 +6,13 @@ services:
   - docker
 
 before_install:
+- mkdir src
+- cd src
+- git clone --depth 1 https://github.com/lktromp/FloorHeatingPumpController.git -b master
+- cd ..
 - docker pull macrat/docker-mbed-cli
-- docker run --rm -v `pwd`:/src macrat/docker-mbed-cli compile -m BOARD_NAME
+- docker run --rm -v `pwd`:/src macrat/docker-mbed-cli compile -m LPC1768
+
 - cd project-name
 - ls
 
