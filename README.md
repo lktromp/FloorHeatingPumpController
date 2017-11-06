@@ -1,4 +1,14 @@
-## Welcome to GitHub Pages
+## Floorheating Pump Controller
+
+This code is designed to run on a custom hardware board, based on the Mbed Platform. It measures temperature on four places on a floor heating heat exchanger:
+- Central heating inlet temperature
+- Central heating return temperature
+- Floor output temperature
+- Floor return temperature 
+The custom board logs these temperatures to memory. This data can be used in conjunction with OpenTherm data of the Central Heating system, output of a smart gas meter and other data sources to obtain insight in the workings and optimal control methods of the floor heating system. 
+
+The system also has an solid state relay output for controlling the floor heating pump.
+
 
 You can use the [editor on GitHub](https://github.com/lktromp/FloorHeatingPumpController/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
