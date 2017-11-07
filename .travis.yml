@@ -1,5 +1,4 @@
 sudo: required
-
 language:
 - c++
 services:
@@ -7,7 +6,7 @@ services:
 
 before_install:
 - docker pull macrat/docker-mbed-cli
-- cd src
+- ls
 - docker run -v `pwd`:/src macrat/docker-mbed-cli config root .
 - docker run -v `pwd`:/src macrat/docker-mbed-cli deploy
 - docker run -v `pwd`:/src macrat/docker-mbed-cli compile -m LPC1768
